@@ -4,11 +4,21 @@
 #include <math.h>
 #include "FusionEKF.h"
 #include "tools.h"
+#include "Eigen/Dense"
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <vector>
+#include <stdlib.h>
 
 using namespace std;
+using Eigen::MatrixXd;
+using Eigen::VectorXd;
+using std::vector;
 
 // for convenience
 using json = nlohmann::json;
+
 
 // Checks if the SocketIO event has JSON data.
 // If there is data the JSON object in string format will be returned,
